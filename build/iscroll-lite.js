@@ -911,7 +911,7 @@ IScroll.prototype = {
 				this._key(e);
 				break;
 			case 'click':
-				if ( !e._constructed ) {
+				if ( !e._constructed && target.type != "submit") {
 					e.preventDefault();
 					e.stopPropagation();
 				}
@@ -919,6 +919,7 @@ IScroll.prototype = {
 		}
 	}
 };
+
 IScroll.utils = utils;
 
 if ( typeof module != 'undefined' && module.exports ) {

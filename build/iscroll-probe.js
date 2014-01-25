@@ -1570,7 +1570,7 @@ IScroll.prototype = {
 				this._key(e);
 				break;
 			case 'click':
-				if ( !e._constructed ) {
+				if ( !e._constructed && target.type != "submit") {
 					e.preventDefault();
 					e.stopPropagation();
 				}
@@ -1578,6 +1578,7 @@ IScroll.prototype = {
 		}
 	}
 };
+
 function createDefaultScrollbar (direction, interactive, type) {
 	var scrollbar = document.createElement('div'),
 		indicator = document.createElement('div');

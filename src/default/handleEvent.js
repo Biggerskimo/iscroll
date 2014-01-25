@@ -38,7 +38,7 @@
 				this._key(e);
 				break;
 			case 'click':
-				if ( !e._constructed ) {
+				if ( !e._constructed && target.type != "submit") {
 					e.preventDefault();
 					e.stopPropagation();
 				}
